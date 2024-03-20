@@ -1,13 +1,13 @@
 import random
 
-def pogodi(x):
-    random_number = random.randint(1, x)
+def pogodi(broj):
+    random_number = random.randint(1, broj)
     pogodi = 0
     while pogodi != random_number:
-        pogodi = input(print(f'Pogodi izmedju 1 i {x}:'))
+        pogodi = int(input((f'Pogodi izmedju 1 i {broj}:')))
         if pogodi < random_number:
             print('Probaj veci broj')
         elif pogodi > random_number:
-            print ('Probaj manji broj')
+            print('Probaj manji broj')
         else:
-            print ('Bravo pogodi si!')
+            print('Bravo pogodi si!')
