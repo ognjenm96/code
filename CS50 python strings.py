@@ -18,5 +18,4 @@ print(name)
 name = input("Your name ? ").strip().title()
 print(name)
 
-# INT's
-
+# Python can be use interactiv (interactiv mode), just type python or python3 on the terminal
