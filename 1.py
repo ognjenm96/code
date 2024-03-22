@@ -11,3 +11,4 @@ def pogodi(broj):
             print('Probaj manji broj')
         else:
             print('Bravo pogodi si!')
+            # test
