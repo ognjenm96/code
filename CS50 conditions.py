@@ -35,3 +35,28 @@ def paran(n):
         return True
     else:
         return False
+
+# ova funkcije se moze ovako napisati specificno za python
+def paran(n):
+    return True if n % 2 == 0 else False
+
+ime = input("Tvoje ime:")
+
+if ime == "Harry":
+    print("Grifindor")
+elif ime == "Draco":
+    print("Sliterin")
+else:
+    print("Sta ??")
+
+# moze se implementirati ovako pomocu match i case
+match ime:
+    case "Harry": 
+        print("Grifindor")
+# za vise opcija moze se koristiti ovako
+    case "Harry" | "Hermioni" | "Ron":
+        print("Grifindor")
+    case "Draco":
+        print("Sliterin")
+    case _: # ovo znaci bilo koji case koji nije definisan uradi definisano ispod
+        print("Sta ??")
