@@ -15,4 +15,4 @@ print(studenti["Drako"]) # dobijemo iz koje su kuce jer je to njegov par
 
 # ova petlja ce ispirsati key i value par
 for student in studenti:
-    print(student, studenti[student])
+    print(student, studenti[student], end=" ") 
