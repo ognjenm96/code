@@ -5,7 +5,8 @@
 # while i !=0:
 #    print("av!")
 
-# ovako je tacna petlja koja ce uraditi print 3 puta iz ovog primera
+# ovako je tacna petlja koja ce uraditi print 3 puta iz 
+# ovog primera
 i = 3
 while i !=0:
     print("AV")
