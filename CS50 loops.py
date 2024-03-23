@@ -10,3 +10,9 @@ i = 3
 while i !=0:
     print("AV")
     i = i - 1
+
+# Python broji od 0
+n = 0
+while n < 3:
+    print("MEOW")
+    n = n +1 # ovo se moze postici ovako n += 1
