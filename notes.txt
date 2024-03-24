@@ -1,0 +1,6 @@
+- pytest je 3rd party tool koji mozemo koristiti za testiranje
+naseg koda,
+koristi se kucanjem:
+pytest ime_pytondokumenta.py
+
+
