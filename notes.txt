@@ -3,4 +3,3 @@ naseg koda,
 koristi se kucanjem:
 pytest ime_pytondokumenta.py
 
-
