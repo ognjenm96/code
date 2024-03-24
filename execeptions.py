@@ -5,3 +5,5 @@ try:
 # except se koristi da odradi nesto ako nesto krene po zlu da ispise to
 except SyntaxError:
     print(SystemError) # ovde ispise koji je SynaxError
+# pass ignorise ono sto je definisano ispod njega
+pass
