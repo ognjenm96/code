@@ -1,3 +1,4 @@
+import csv
 # Create an empty list to store the student information
 ucenici = []
 
