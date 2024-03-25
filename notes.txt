@@ -3,5 +3,20 @@ naseg koda,
 koristi se kucanjem:
 pytest ime_pytondokumenta.py
 
-test note
-ading
+# Open the file in read mode
+file = open('/home/ognjenm/code/notes.txt', 'r')
+
+# Read the contents of the file
+contents = file.read()
+
+# Close the file
+file.close()
+
+# Open the file in write mode
+file = open('/home/ognjenm/code/notes.txt', 'w')
+
+# Write data to the file
+file.write('This is a new line of text.')
+
+# Close the file
+file.close()
