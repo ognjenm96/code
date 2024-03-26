@@ -1,0 +1,24 @@
+import re
+
+def validate_email(email):
+    """
+    Validates an email address using regular expressions.
+
+    Args:
+        email (str): The email address to validate.
+
+    Returns:
+        bool: True if the email address is valid, False otherwise.
+    """
+    pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+    # The regular expression pattern used to validate the email address.
+    # Explanation:
+    # - ^[\w\.-]+: Matches one or more word characters, dots, or dashes at the start of the string.
+    # - @: Matches the "@" symbol.
+    # - [\w\.-]+: Matches one or more word characters, dots, or dashes after the "@" symbol.
+    # - \.: Matches a dot.
+    # - \w+$: Matches one or more word characters at the end of the string.
+
+    return re.match(pattern, email) is not None
+
+    
