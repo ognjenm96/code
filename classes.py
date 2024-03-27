@@ -20,5 +20,5 @@ def get_ucenik():
     skola = input("Unesite skolu ucenika: ") # atributi klase
     return Ucenik(ime, skola) # kreiranje objekta klase
 
-if __name__ == "__main__":
+if __name__ == "__main__": # provera da li je fajl pokrenut direktno
     main()
