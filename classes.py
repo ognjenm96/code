@@ -1,6 +1,7 @@
 class Ucenik: #klasa
     # atributi klase (promenljive) - karakteristike objekta
-    def __init__(self, ime, skola, predmet): # konstruktor klase (inicijalizacija)
+    # konstruktor klase (inicijalizacija)
+    def __init__(self, ime, skola, predmet): 
         if not ime:
             # izbacujemo izuzetak ako je ime prazno
             # raise - izbacuje izuzetak, ValueError - tip izuzetka 
