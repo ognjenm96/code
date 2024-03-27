@@ -7,11 +7,17 @@
 def main():
     student = get_student()
     print(f"Hello, {student[0]} from {student[1]}") #  student[0] is name and student[1] is house
+    print(f"{student:['name']} from {student['house']}") # dictionary can be accessed by key
 
 def get_student():
     name = input("Name: ")
     house = input("House: ")
-    return (name, house)
+    return (name, house) # return tuple
+
+def get_students():
+    student = {} # dictionary
+    student["name"] = input("Name: ")
+    student["house"] = input("House: ")
 
 if __name__ == "__main__":
     main()
