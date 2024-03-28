@@ -6,14 +6,15 @@ class Ucenik:
     def __str__(self):
         return f"{self.ime} pohadja {self.skola}"
     
-def main():
-    ucenik = get_ucenik()
-    print(ucenik)
+    @classmethod # metoda klase
+    def get(cls):
+        ime = input("Unesite ime ucenika: ")
+        skola = input("Unesite skolu ucenika: ")
+        return cls(ime, skola)
     
-def get_ucenik():
-    ime = input("Unesite ime ucenika: ")
-    skola = input("Unesite skolu ucenika: ") 
-    return Ucenik(ime, skola) 
+def main():
+    ucenik = Ucenik.get()
+    print(ucenik)
 
 if __name__ == "__main__": 
     main()
