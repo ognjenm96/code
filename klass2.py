@@ -1,15 +1,21 @@
 class Ucenik:
     def __init__(self, ime, skola): 
-        if not ime:
-            raise ValueError("Ime ne sme biti prazno")
-        if skola not in ["Masinska", "Gimnazija", "Tehnicka","Ekonomska"]:
-            raise ValueError("Skola nije validna")
         self.ime = ime 
         self.skola = skola
 
     def __str__(self):
         return f"{self.ime} pohadja {self.skola}"
     
+    @property
+    def ime(self):
+        return self._ime
+    
+    @ime.setter
+    def ime(self, ime):
+        if not ime:
+            raise ValueError("Ime ne sme biti prazno")
+        self._ime = ime
+
     # property in python is a special decorator that allows us to define a method but we can access it like an attribute
 
     # Getter is a method that gets the value of a specific attribute
