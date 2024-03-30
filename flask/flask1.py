@@ -3,10 +3,16 @@ from flask import Flask, redirect, url_for, render_template
 
 app = Flask(__name__) # Create a Flask app
 
-@app.route("/") # Home page 
+@app.route("/<name>") # Home page 
 def home(name):
     # render_template() function is used to render a template.
     return render_template("index.html")
+
+
+
+
+
+
 
 @app.route("/<name>") # app.route() decorator to tell Flask what URL should trigger the function
 def user(name):
