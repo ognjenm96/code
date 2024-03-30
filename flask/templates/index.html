@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Website</title>
-</head>
-<body>
-    <h1>Welcome to My Website</h1>
-    <p>{{content}}</p>
-    <p>{{r}}</p>
-    <p>{% for x in range(10) %}</p>
-    <p>{{x}}</p>
-    <p>{% endfor %}</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+<h1>Here goes the content</h1>
+{% endblock %}
