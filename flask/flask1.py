@@ -1,5 +1,5 @@
 # Flask is a web framework for Python. It is used to create web applications.
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, redirect, url_for, render_template, request
 
 app = Flask(__name__) # Create a Flask app
 
