@@ -14,7 +14,10 @@ def home():
 
 @app.route("/login", methods=["POST", "GET"])
 def login():
-    return render_template("login.html")
+    if request.method == "POST":
+        r
+    else:
+        return render_template("login.html")
 
 @app.route("/user/<usr>")
 def user(usr):
