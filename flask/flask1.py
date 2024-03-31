@@ -1,6 +1,7 @@
 # Flask is a web framework for Python. It is used to create web applications.
-from flask import Flask, redirect, url_for, render_template, request, session
+from flask import Flask, redirect, url_for, render_template, request, session, flash
 from datetime import timedelta
+from flask import flash
 
 app = Flask(__name__) # Create a Flask app
 app.secret_key = "comples" # Secret key for session
@@ -28,11 +29,15 @@ def user(): # User page
         user = session["user"] # Get the user from the session
         return render_template("user.html", user=user)
     else:
+        flash ("You are not logged in!", "info")
         return redirect(url_for("login"))
     
 @app.route("/logout")
 def logout(): # Logout page
-    session.pop("user", None) # Remove the user from the session 
+    if "user" in session:
+        user = session["user"]
+        flash(f"You have been logged out! {user}", "info") # Flash message , info is the category there aro 4 types of categories: primary, secondary, success, danger
+    session.pop("user", None) # Remove the user from the session
     return redirect(url_for("login")) # Redirect to the login page
 
 if __name__ == "__main__":

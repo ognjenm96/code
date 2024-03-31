@@ -2,7 +2,14 @@
 {% block title %} Login page {% endblock %}
 
 {% block content %}
-
+<h1> Login page </h1>
+    {% with massages = get_flashed_messages() %} 
+        {% if massages  %} 
+            {% for msg in massages %}
+                <p>{{ msg }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
 <form action="#" method="post">
     <p>Name:</p>
     <p><input type="text" name="nm" /></p>
