@@ -1,6 +1,8 @@
 
 import datetime
 
+# nadji ime fajla za koji je potrebno unete info
+
 # for Morning shift 08 - 16
 
 Job_Name_Morning = [
