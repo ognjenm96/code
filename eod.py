@@ -7,21 +7,29 @@ import os # is use for reading and writing files
 
 # get the email from the outlook
 
-access_token = pyOutlook.get_access_token(
-    client_id='your_client_id',
-    client_secret='your_client_secret',
-    username='your_username',
-    password='your_password',
-    scopes=['https://outlook.office.com/mail.read']
+# Access Outlook account
+outlook_account = outlook.Outlook(
+    email="ognjen.mitic@mainstream.eu",
+    password="5cfHcr?9CYAN9",
+    debug=True,
+)
+outlook_account.login()
+
+# Read emails from Outlook
+emails = outlook_account.get_emails(
+    sender="
 )
 
-pyOutlook.Message.get_messages(
-    access_token=access_token,
-    folder_name='Inbox',
-    select_fields=['subject', 'receivedDateTime', 'sender', 'bodyPreview'],
-    search_query='from:
-    "your_email_address" AND subject: "EOD Morning Shift 08 - 16"',
-)
+# Process emails and extract information
+for email in emails:
+    # Extract information from email
+    # ...
+
+    # Update the Excel sheet with the extracted information
+    # ...
+
+# Close the Outlook connection
+outlook_account.logout()
 
 # nadji ime fajla za koji je potrebno unete info
 
