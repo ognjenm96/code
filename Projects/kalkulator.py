@@ -1,11 +1,11 @@
-def main():
-    print("Moguce je uneti samo cele brojeve")
+print("Dobrodosli u kalkulator")
 
-def operatori_brojeva(i):
+def operatori_brojeva():
+    print("Moguce je uneti samo cele brojeve")
     x = int(input("Unesite prvi broj: "))
-    z = int(input("Izaberite operaciju: +, -, *, /"))
+    i = str(input("Izaberite operaciju: +, -, *, / : "))
     y = int(input("Unesite drugi broj: "))
-    zbir = x, z, y
+    zbir = x + y
     razlika = x - y
     proizvod = x * y
     kolicnik = x / y
@@ -19,7 +19,5 @@ def operatori_brojeva(i):
         print(f"Kolicnik brojeva {x} i {y} je {kolicnik}")
     else:
         print("Niste uneli validan broj")
-    
-if __name__ == main():
-    operatori_brojeva(i)
-    main()
+
+operatori_brojeva()
