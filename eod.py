@@ -1,7 +1,30 @@
-
+# Description: This script is used to fill the EOD excel sheet with the information from the email
 import datetime
+import openpyxl # is use for reading and writing excel files
+import outlook # is use for reading emails from outlook
+import pyOutlook # is use for reading emails from outlook
+import os # is use for reading and writing files
+
+# get the email from the outlook
+
+access_token = pyOutlook.get_access_token(
+    client_id='your_client_id',
+    client_secret='your_client_secret',
+    username='your_username',
+    password='your_password',
+    scopes=['https://outlook.office.com/mail.read']
+)
+
+pyOutlook.Message.get_messages(
+    access_token=access_token,
+    folder_name='Inbox',
+    select_fields=['subject', 'receivedDateTime', 'sender', 'bodyPreview'],
+    search_query='from:
+    "your_email_address" AND subject: "EOD Morning Shift 08 - 16"',
+)
 
 # nadji ime fajla za koji je potrebno unete info
+
 
 # for Morning shift 08 - 16
 
