@@ -1,7 +1,6 @@
 # Flask is a web framework for Python. It is used to create web applications.
 from flask import Flask, redirect, url_for, render_template, request, session, flash
 from datetime import timedelta
-from flask import flash
 
 app = Flask(__name__) # Create a Flask app
 app.secret_key = "comples" # Secret key for session
