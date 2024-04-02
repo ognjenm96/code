@@ -8,35 +8,31 @@ import os # is use for reading and writing files
 # get the email from the outlook
 
 # Access Outlook account
-outlook_account = outlook.Outlook(
+def get_emails():
+    outlook_account = outlook.Outlook(
     email="ognjen.mitic@mainstream.eu",
     password="5cfHcr?9CYAN9",
     debug=True,
 )
-outlook_account.login()
+    outlook_account.login()
 
 # Read emails from Outlook
-emails = outlook_account.get_emails(
-    sender="
-)
+    emails = outlook_account.get_emails(
+        sender=""
+        for email in emails:
+    )
 
-# Process emails and extract information
-for email in emails:
-    # Extract information from email
-    # ...
-
-    # Update the Excel sheet with the extracted information
-    # ...
-
-# Close the Outlook connection
-outlook_account.logout()
+#outlook_account.logout()
 
 # nadji ime fajla za koji je potrebno unete info
 
 
 # for Morning shift 08 - 16
-
-Job_Name_Morning = [
+def get_job_name_morning():
+    for job in Job_Name_Morning:
+        if job in email_subject:
+            return job
+    Job_Name_Morning = [
     "Extraction of SABINE data for T24",
     "EGCP Batch 131 File",
     "EGCP Batch 124 File",
