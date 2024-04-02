@@ -11,7 +11,7 @@ import os # is use for reading and writing files
 def get_emails():
     outlook_account = outlook.Outlook(
     email="ognjen.mitic@mainstream.eu",
-    password="5cfHcr?9CYAN9",
+    password="",
     debug=True,
 )
     outlook_account.login()
