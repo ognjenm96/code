@@ -1,11 +1,11 @@
 import sqlite3
 import click
-from flask import flask1, g
+from flask import current_app, g
 
 def get_b():
     if 'flask_db' not in g:
         g.flask_db = sqlite3.connect(
-            flask1.config['DATABASE'],
+            current_app.config['DATABASE'],
             detect_types=sqlite3.PARSE_DECLTYPES
         )
         g.flask_db.row_factory = sqlite3.Row
