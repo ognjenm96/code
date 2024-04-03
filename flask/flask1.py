@@ -1,10 +1,17 @@
 # Flask is a web framework for Python. It is used to create web applications.
 from flask import Flask, redirect, url_for, render_template, request, session, flash
 from datetime import timedelta
+import os
+from . import flask_db
 
 app = Flask(__name__) # Create a Flask app
 app.secret_key = "comples" # Secret key for session
 app.permanent_session_lifetime = timedelta(minutes=30) # Set the session lifetime to 30 minutes
+app.config.from_mapping(
+        SECRET_KEY='dev',
+        DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
+    )
+flask_db.init_app(app)
 
 @app.route("/") 
 def home(): # Home page 
