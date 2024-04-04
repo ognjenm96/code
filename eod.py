@@ -2,29 +2,9 @@
 import datetime
 import openpyxl # is use for reading and writing excel files
 import outlook # is use for reading emails from outlook
-import pyOutlook # is use for reading emails from outlook
 import os # is use for reading and writing files
 
-# get the email from the outlook
 
-# Access Outlook account
-def get_emails():
-    outlook_account = outlook.Outlook(
-    email="ognjen.mitic@mainstream.eu",
-    password="",
-    debug=True,
-)
-    outlook_account.login()
-
-# Read emails from Outlook
-    emails = outlook_account.get_emails(
-        sender=""
-        for email in emails:
-    )
-
-#outlook_account.logout()
-
-# nadji ime fajla za koji je potrebno unete info
 
 
 # for Morning shift 08 - 16
