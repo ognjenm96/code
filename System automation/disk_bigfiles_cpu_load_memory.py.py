@@ -7,25 +7,29 @@ ip = input("Enter the IP address of the server: ")
 username = input("Enter the username: ")
 password = input("Enter the password: ")
 
+ssh = paramiko.SSHClient()
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect(ip, username=username, password=password)
+
 def check_disk_usage():
-    ssh = paramiko.SSHClient()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(ip, username=username, password=password)
     stdin, stdout, stderr = ssh.exec_command('df -h')
+    print("Disk usage:")
     print(stdout.read().decode())
 
 def find_big_files():
-    ssh = paramiko.SSHClient()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(ip, username=username, password=password)
     stdin, stdout, stderr = ssh.exec_command('find / -type f -size +50M -exec du -h {} \; | sort -rh')
+    print("Big files on / :")
     print(stdout.read().decode())
 
 def check_cpu_usage():
-    print(psutil.cpu_percent(interval=1, percpu=True))
+    stdin, stdout, stderr = ssh.exec_command('uptime')
+    print("Uptime, users on server, cpu load 1min, 5min, 15min:")
+    print(stdout.read().decode())
 
 def check_memory_usage():
-    print(psutil.virtual_memory().free / (1024 * 1024) + psutil.virtual_memory().used / (1024 * 1024))
+    stdin, stdout, stderr = ssh.exec_command('free -h')
+    print("Memory usage:")
+    print(stdout.read().decode())
 
 check_disk_usage()
 find_big_files()
