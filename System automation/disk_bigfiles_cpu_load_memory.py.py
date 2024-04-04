@@ -1,4 +1,4 @@
-# This script is used to check the disk usage, find big files, check CPU usage and check memory usage of a remote server.
+# This script is used to check the disk usage, find big files, check CPU usage and check memory usage of a remote Linux server.
 import psutil
 import paramiko
 from psutil._common import bytes2human
