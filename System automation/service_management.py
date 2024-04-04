@@ -3,9 +3,17 @@ import psutil
 import os
 import paramiko
 
-#ssh to the server
-paramiko.SSHClient().connect("server_ip", username="username", password="password"
-)
+#ssh to the server and execute the command
+def ssh_client():
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    password = input("Enter the password: ")
+    ssh.connect('192.168.124.11', username='debian', password=password)
+    stdin, stdout, stderr = ssh.exec_command('df -h')
+    print(stdout.read())
+    ssh.close()
+
+ssh_client()
 
 #Check the disk usage, CPU usage and memory usage
 
