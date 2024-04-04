@@ -1,17 +1,13 @@
-import shutil
+# This script is used to check the disk usage, find big files, check CPU usage and check memory usage of a remote server.
 import psutil
-import os
 import paramiko
 
-#ssh to the server and execute the command
 def check_disk_usage():
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect('192.168.124.11', username='root', password="k3nun02p.")
     stdin, stdout, stderr = ssh.exec_command('df -h')
     print(stdout.read().decode())
-
-#Check the disk usage, CPU usage and memory usage
 
 def find_big_files():
     ssh = paramiko.SSHClient()
