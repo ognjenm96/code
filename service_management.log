@@ -1,0 +1,66 @@
+2024-04-04 16:01:10,110:INFO:Connected (version 2.0, client OpenSSH_9.2p1)
+2024-04-04 16:01:10,191:INFO:Authentication (publickey) failed.
+2024-04-04 16:01:10,396:INFO:Authentication (publickey) failed.
+2024-04-04 16:01:10,445:INFO:Authentication (password) successful!
+2024-04-04 16:01:10,615:INFO:Disk usage:
+2024-04-04 16:01:10,622:INFO:Filesystem      Size  Used Avail Use% Mounted on
+udev            962M     0  962M   0% /dev
+tmpfs           197M  636K  197M   1% /run
+/dev/vda1       8.9G  1.7G  6.7G  21% /
+tmpfs           984M     0  984M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           197M     0  197M   0% /run/user/1000
+tmpfs           197M     0  197M   0% /run/user/0
+
+2024-04-04 16:01:10,666:INFO:File size more than 10 MB:
+2024-04-04 16:01:10,954:INFO:49M	/var/lib/apt/lists/deb.debian.org_debian_dists_bookworm_main_source_Sources
+48M	/var/lib/apt/lists/deb.debian.org_debian_dists_bookworm_main_binary-amd64_Packages
+38M	/var/cache/apt/srcpkgcache.bin
+38M	/var/cache/apt/pkgcache.bin
+37M	/boot/initrd.img-6.1.0-18-amd64
+34M	/usr/lib/gcc/x86_64-linux-gnu/12/cc1plus
+32M	/var/lib/apt/lists/deb.debian.org_debian_dists_bookworm_main_i18n_Translation-en
+32M	/usr/lib/gcc/x86_64-linux-gnu/12/cc1
+31M	/usr/lib/gcc/x86_64-linux-gnu/12/lto1
+31M	/usr/bin/x86_64-linux-gnu-lto-dump-12
+30M	/usr/lib/x86_64-linux-gnu/libicudata.so.72.1
+19M	/usr/lib/modules/6.1.0-18-amd64/kernel/drivers/gpu/drm/amd/amdgpu/amdgpu.ko
+16M	/usr/lib/x86_64-linux-gnu/libx265.so.199
+14M	/var/log/installer/cdebconf/templates.dat
+13M	/usr/lib/python3.11/config-3.11-x86_64-linux-gnu/libpython3.11.a
+12M	/usr/lib/udev/hwdb.bin
+12M	/usr/lib/python3.11/config-3.11-x86_64-linux-gnu/libpython3.11-pic.a
+0	/proc/kcore
+
+2024-04-04 16:01:10,997:INFO:Uptime, users on server, CPU load 1min, 5min, 15min:
+2024-04-04 16:01:11,003:INFO: 16:01:11 up  3:06,  2 users,  load average: 0.00, 0.00, 0.00
+
+2024-04-04 16:01:11,049:INFO:Memory usage:
+2024-04-04 16:01:11,055:INFO:               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       308Mi       950Mi       4.5Mi       896Mi       1.6Gi
+Swap:          974Mi          0B       974Mi
+
+2024-04-04 16:01:11,101:INFO:SSH service status:
+2024-04-04 16:01:11,114:INFO:● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2024-04-04 14:19:40 CEST; 1h 41min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 3301 (sshd)
+      Tasks: 1 (limit: 2307)
+     Memory: 3.0M
+        CPU: 3.413s
+     CGroup: /system.slice/ssh.service
+             └─3301 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Apr 04 15:53:26 debian sshd[4499]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
+Apr 04 15:53:26 debian sshd[4499]: pam_env(sshd:session): deprecated reading of user environment enabled
+Apr 04 15:53:26 debian sshd[4499]: pam_unix(sshd:session): session closed for user root
+Apr 04 15:55:31 debian sshd[4548]: Accepted password for root from 192.168.124.1 port 54616 ssh2
+Apr 04 15:55:31 debian sshd[4548]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
+Apr 04 15:55:31 debian sshd[4548]: pam_env(sshd:session): deprecated reading of user environment enabled
+Apr 04 15:55:32 debian sshd[4548]: pam_unix(sshd:session): session closed for user root
+Apr 04 16:01:10 debian sshd[4598]: Accepted password for root from 192.168.124.1 port 43598 ssh2
+Apr 04 16:01:10 debian sshd[4598]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)
+Apr 04 16:01:10 debian sshd[4598]: pam_env(sshd:session): deprecated reading of user environment enabled
+
