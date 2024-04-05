@@ -1,8 +1,10 @@
 # This script is used to check the disk usage, find big files, check CPU usage and check memory usage of a remote Linux server.
-import psutil
 import paramiko
-from psutil._common import bytes2human
 import getpass
+import logging
+import datetime
+
+logging.basicConfig(filename=f"stats{datetime.datetime.now().strftime('%Y-%m-%d')}.log", level=logging.ERROR, format='%(asctime)s - %(message)s')
 
 ip = input("Enter the IP address of the server: ")
 username = input("Enter the username: ")
@@ -12,13 +14,14 @@ file_size = input("Enter the file size to search for (in MB): ")
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 ssh.connect(ip, username=username, password=password)
+
 print("..............................................................................")
 
 def check_disk_usage():
     stdin, stdout, stderr = ssh.exec_command('df -h')
-    print("Disk usage:")
+    logging.info(print("Disk usage:"))
     print(" ")
-    print(stdout.read().decode())
+    logging.info(stdout.read().decode())
     print("..............................................................................")
 
 def find_big_files():
