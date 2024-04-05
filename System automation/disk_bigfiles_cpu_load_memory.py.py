@@ -4,9 +4,10 @@ import getpass
 import logging
 import datetime
 
-logging.basicConfig(filename=f"stats{datetime.datetime.now().strftime('%Y-%m-%d')}.log", level=logging.ERROR, format='%(asctime)s - %(message)s')
-
 ip = input("Enter the IP address of the server: ")
+
+logging.basicConfig(filename=f"server({ip})stats{datetime.datetime.now().strftime('%Y-%m-%d')}.log", level=logging.ERROR, format='%(asctime)s - %(message)s')
+
 username = input("Enter the username: ")
 password = getpass.getpass("Enter the password: ")
 file_size = input("Enter the file size to search for (in MB): ")
