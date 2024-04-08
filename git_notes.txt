@@ -5,3 +5,13 @@ git cpmmit -am "massage" - commit and add all the files that i cahnged
 git status - teels us what is curently happening
 git push - push to GitHub
 git pull - pull files from GitHube
+
+git log - keep track of commits
+git reset - reset to one of the privius commits or to master
+git reset --hard <commit>
+git reset --hard origin/master
+
+git branch - give as the current branch and on what are we working on
+git checkout -b <name of new branch> - crete a new branch
+git checkout master - to switch to master branch, can be any branch
+git merge <name of branch> - use this from master branch
