@@ -1,1 +1,5 @@
-git add - is used to add a file to you whant to track and eventuli commit
+git clone - add a repo from github to local repo
+git add <filename> - is used to add a file to you whant to track and eventuli commit
+git commit -m "massage"
+git status - teels us what is curently happening
+git push - push to GitHub
