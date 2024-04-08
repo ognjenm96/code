@@ -1,0 +1,1 @@
+git add - is used to add a file to you whant to track and eventuli commit
