@@ -1,5 +1,11 @@
-# Write django notes here
+## notes ##
 
 # starting a django project
 django-admin startproject name_of_the_project
+
+# to run the django server
+python manage.py runserver
+
+# create a django app
+python manage.py startapp app_name
 
