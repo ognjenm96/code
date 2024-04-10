@@ -1,1 +1,5 @@
 # Write django notes here
+
+# starting a django project
+django-admin startproject name_of_the_project
+
