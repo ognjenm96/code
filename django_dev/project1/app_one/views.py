@@ -4,4 +4,10 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world")
+    return render(request, 'index/index.html')
+
+def ogi(request):
+    return HttpResponse("Hello, Ogi")
+
+def zdravo(request, ime):
+    return HttpResponse(f"Zdravo, {ime}")
