@@ -9,3 +9,4 @@ python manage.py runserver
 # create a django app
 python manage.py startapp app_name
 
+# views.py is use to def
