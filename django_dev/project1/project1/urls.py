@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns = [
+    path('app_one/', include('app_one.urls'))
+] # This line includes the URL configuration for the app_one app. The include() function is used to include the URL configuration from another URLconf module. In this case, the URL configuration for the app_one app is included by passing the app_one.urls module to the include() function. This means that any URL patterns defined in the app_one.urls module will be included in the URL configuration for the project1 project. The URL pattern for the app_one app is 'app_one/'. This means that any URL patterns defined in the app_one.urls module will be prefixed with 'app_one/' in the project1 project. For example, if the URL pattern in the app_one.urls module is an empty string, it will be accessible at 'app_one/'. If the URL pattern is 'index/', it will be accessible at 'app_one/index/'.

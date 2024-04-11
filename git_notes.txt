@@ -15,3 +15,7 @@ git branch - give as the current branch and on what are we working on
 git checkout -b <name of new branch> - crete a new branch
 git checkout master - to switch to master branch, can be any branch
 git merge <name of branch> - use this from master branch
+
+Ignoring files
+You can configure Git to ignore files you don't want to check in to GitHub.
+https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
