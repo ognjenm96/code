@@ -10,3 +10,4 @@ python manage.py runserver
 python manage.py startapp app_name
 
 # views.py is use to def
+Here we define our functions that will display some porton of our site or some of it's functionalitys
