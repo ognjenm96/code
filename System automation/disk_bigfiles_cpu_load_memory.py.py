@@ -11,6 +11,7 @@ logging.basicConfig(filename=f"server({ip})stats{datetime.datetime.now().strftim
 username = input("Enter the username: ")
 password = getpass.getpass("Enter the password: ")
 file_size = input("Enter the file size to search for (in MB): ")
+service_name = input("Service to chack status:")
 
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -20,7 +21,7 @@ print(".........................................................................
 
 def check_disk_usage():
     stdin, stdout, stderr = ssh.exec_command('df -h')
-    logging.info(print("Disk usage:"))
+    print("Disk usage:")
     print(" ")
     logging.info(stdout.read().decode())
     print("..............................................................................")
@@ -47,7 +48,7 @@ def check_memory_usage():
     print("..............................................................................")
 
 def check_servise():
-    stdin, stdout, stderr = ssh.exec_command('systemctl status ssh.service')
+    stdin, stdout, stderr = ssh.exec_command(f"systemctl status {service_name}")
     print("SSH service status:")
     print(" ")
     print(stdout.read().decode())
