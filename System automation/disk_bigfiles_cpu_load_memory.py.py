@@ -4,7 +4,7 @@ import getpass
 import logging
 import datetime
 
-ip = input("Enter the IP address of the server: ")
+ip = input("Enter the IP address or DNS name of the server: ")
 
 logging.basicConfig(filename=f"server({ip})stats{datetime.datetime.now().strftime('%Y-%m-%d')}.log", level=logging.ERROR, format='%(asctime)s - %(message)s')
 
