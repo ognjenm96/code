@@ -23,7 +23,7 @@ def check_disk_usage():
     stdin, stdout, stderr = ssh.exec_command('df -h')
     print("Disk usage:")
     print(" ")
-    logging.info(stdout.read().decode())
+    print(stdout.read().decode())
     print("..............................................................................")
 
 def find_big_files():
