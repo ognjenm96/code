@@ -5,13 +5,8 @@ import logging
 import datetime
 
 ip = input("Enter the IP address or DNS name of the server: ")
-
-logging.basicConfig(filename=f"server({ip})stats{datetime.datetime.now().strftime('%Y-%m-%d')}.log", level=logging.INFO, format='%(asctime)s - %(message)s')
-
 username = input("Enter the username: ")
 password = getpass.getpass("Enter the password: ")
-file_size = input("Enter the file size to search for (in MB): ")
-service_name = input("Service to chack status:")
 
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -23,10 +18,11 @@ def check_disk_usage():
     stdin, stdout, stderr = ssh.exec_command('df -h')
     print("Disk usage:")
     print(" ")
-    logging.print(stdout.read().decode())
+    print(stdout.read().decode())
     print("..............................................................................")
 
 def find_big_files():
+    file_size = input("Enter the file size to search for (in MB): ")
     stdin, stdout, stderr = ssh.exec_command(f"find / -type f -size +{file_size}M -exec du -h {{}} \; | sort -rh")
     print(f"File size more then {file_size} /* :")
     print(" ")
@@ -48,8 +44,11 @@ def check_memory_usage():
     print("..............................................................................")
 
 def check_servise():
-    stdin, stdout, stderr = ssh.exec_command(f"systemctl status {service_name}")
-    print("SSH service status:")
+    # service_name = input("Service to chack status:")
+    # stdin, stdout, stderr = ssh.exec_command(f"systemctl status {service_name}")
+     # print(f"{service_name} service status:")
+    stdin, stdout, stderr = ssh.exec_command("systemctl list-units --type=service --state=running")
+    print("Running services status:")
     print(" ")
     print(stdout.read().decode())
     print("..............................................................................")
