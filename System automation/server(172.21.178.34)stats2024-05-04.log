@@ -1,0 +1,7 @@
+2024-05-04 19:19:18,403 - Connected (version 2.0, client OpenSSH_9.6p1)
+2024-05-04 19:19:18,594 - Authentication (publickey) failed.
+2024-05-04 19:19:18,604 - Authentication (password) successful!
+2024-05-04 19:21:42,238 - Connected (version 2.0, client OpenSSH_9.6p1)
+2024-05-04 19:21:42,397 - Authentication (publickey) failed.
+2024-05-04 19:21:42,409 - Authentication (password) successful!
+2024-05-04 19:21:42,953 - None
