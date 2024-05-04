@@ -6,7 +6,7 @@ import datetime
 
 ip = input("Enter the IP address or DNS name of the server: ")
 
-logging.basicConfig(filename=f"server({ip})stats{datetime.datetime.now().strftime('%Y-%m-%d')}.log", level=logging.ERROR, format='%(asctime)s - %(message)s')
+logging.basicConfig(filename=f"server({ip})stats{datetime.datetime.now().strftime('%Y-%m-%d')}.log", level=logging.INFO, format='%(asctime)s - %(message)s')
 
 username = input("Enter the username: ")
 password = getpass.getpass("Enter the password: ")
@@ -23,7 +23,7 @@ def check_disk_usage():
     stdin, stdout, stderr = ssh.exec_command('df -h')
     print("Disk usage:")
     print(" ")
-    print(stdout.read().decode())
+    logging.print(stdout.read().decode())
     print("..............................................................................")
 
 def find_big_files():
